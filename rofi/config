@@ -1,0 +1,9 @@
+rofi.color-enabled: true
+
+# Window            background  border    separator
+rofi.color-window:  #4C566A,    #4C566A,  #4C566A
+
+# State             bg        fg        bgalt     hlbg      hlfg
+rofi.color-normal:  #4C566A,  #D8DEE9,  #4C566A,  #4C566A,  #ECEFF4 
+rofi.color-active:  #4C566A,  #D8DEE9,  #4C566A,  #4C566A,  #ECEFF4 
+rofi.color-urgent:  #4C566A,  #D8DEE9,  #4C566A,  #4C566A,  #ECEFF4 

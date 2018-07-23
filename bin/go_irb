@@ -1,0 +1,2 @@
+#! /bin/bash
+urxvt -name floating_term -e sh -c irb

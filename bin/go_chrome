@@ -1,0 +1,8 @@
+#! /bin/bash
+# Launches a chrome window is missing, then focus to the workspace
+count=`ps aux|grep -c chromium`
+if [ $count -eq 1 ]; then
+  i3-msg "exec chromium"
+else
+  i3-msg "[class=Chromium] focus"
+fi
