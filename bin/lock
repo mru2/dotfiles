@@ -1,18 +1,2 @@
 #!/usr/bin/env bash
-
-LOCK_IMG=/tmp/pixellock.png
-SNAPSHOT_CMD="scrot $LOCK_IMG"
-[ ! "$BLUR" ] && BLUR=${1:-2}
-
-# if [[ $BLUR -eq 0 || $BLUR -eq 1 ]] ; then
-SCALE1="10%" SCALE2="1000%"
-# elif [ $BLUR -eq 2 ] ; then
-# SCALE1="20%" SCALE2="500%"
-# elif [ $BLUR -eq 3 ]; then
-# SCALE1="40%" SCALE2="250%"
-# fi
-
-$SNAPSHOT_CMD
-convert $LOCK_IMG -scale $SCALE1 -scale $SCALE2 $LOCK_IMG
-i3lock -i $LOCK_IMG
-rm $LOCK_IMG
+i3lock --color=2E3440 --force-clock --insidevercolor=00000000 --insidewrongcolor=00000000 --insidecolor=00000000 --ringcolor=3B4252FF --ringwrongcolor=BF616AFF --ringvercolor=4C566AFF --line-uses-inside --keyhlcolor=4C566AFF --separatorcolor=00000000 --timecolor=ECEFF4FF --datecolor=D8DEE9FF --datestr="%Y-%m-%d" --time-font="Source Code Pro Medium" --date-font="Source Code Pro Medium" 
