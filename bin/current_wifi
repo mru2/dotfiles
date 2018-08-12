@@ -1,0 +1,2 @@
+#/usr/bin/env bash
+iw dev wlp2s0 info|grep ssid|cut -d " " -f 2

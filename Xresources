@@ -55,3 +55,4 @@ URxvt.boldItalicFont: xft:Source Code Pro:style=Bold Oblique:size=12,xft:Deja Vu
 URxvt.scrollBar: false
 URxvt.internalBorder: 16
 URxvt.perl-ext-common: selection-to-clipboard
+URxvt.saveLines: 10000

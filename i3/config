@@ -25,6 +25,14 @@ default_border pixel 0
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Multimedia keys
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
 # start a launcher
 bindsym $mod+space exec rofi -width 100 -padding 800 -show run -font "Source Code Pro 24" -lines 1
 
@@ -117,6 +125,9 @@ for_window [class="Spotify"] focus
 # Scratchpad
 bindsym $mod+t exec --no-startup-id urxvt -name floating_term
 for_window [instance=floating_term] floating enable
+
+# Floating irb
+bindsym $mod+i exec go_irb
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

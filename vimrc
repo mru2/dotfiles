@@ -3,6 +3,10 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 set nocompatible
@@ -10,6 +14,9 @@ set nocompatible
 " SPACE is the leader
 nnoremap <SPACE> <nop>
 let mapleader=" "
+
+" Prettier
+nmap <Leader>f <Plug>(Prettier)
 
 " Make backspace work
 set backspace=indent,eol,start
@@ -31,6 +38,10 @@ set showmode
 " Line numbers
 set nu
 set relativenumber
+
+" Laptop keyword
+imap <PageUp> <Left>
+imap <PageDown> <Right>
 
 " Clipboard
 set clipboard=unnamedplus

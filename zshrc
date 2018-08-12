@@ -1,6 +1,6 @@
 # Enable prezto
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" 
+	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
 # Enable Z
@@ -13,10 +13,13 @@ export EDITOR=vim
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Add custom bin
-export PATH=$PATH:~/.bin
+export PATH=$PATH:~/.bin:~/.local/bin
 
 # Add ruby binaries
-export PATH=$PATH:/home/mru2/.gem/ruby/2.5.0/bin
+export PATH=$PATH:~/.gem/ruby/2.5.0/bin
+
+# Add yarn scripts
+export PATH=$PATH:~/.yarn/bin
 
 # Start X server
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then

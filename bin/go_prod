@@ -1,0 +1,2 @@
+#! /bin/bash
+urxvt -e sh -c "heroku run rails c -a pretto-api"
