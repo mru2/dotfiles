@@ -1,0 +1,2 @@
+#! /usr/bin/bash
+xrandr --output DP1 --auto --rotate left --right-of eDP1

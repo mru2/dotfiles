@@ -1,5 +1,18 @@
 # /usr/bin/env bash
-TITLE=$(playerctl metadata title)
-ARTIST=$(playerctl metadata artist)
+playerctl status &> /dev/null
+if [ $? -eq 0 ] ; then
+    STATUS=$(playerctl status)
 
-echo "$TITLE - $ARTIST"
+    if [ $STATUS = "Playing" ] ; then
+      ICON=
+    else
+      ICON=
+    fi
+    TITLE=$(playerctl metadata title)
+    ARTIST=$(playerctl metadata artist)
+    echo "$ICON $TITLE - $ARTIST"
+else
+  echo ""
+fi
+
+

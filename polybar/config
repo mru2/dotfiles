@@ -2,28 +2,43 @@
 
 [bar/topbar]
   ; Monitor
-  display = eDP1 
-  
+  display = eDP1
+
   ; Theming
   background = #2E3440
   foreground = #ECEFF4
   font-0 = "Source Code Pro Semibold:size=12;1"
   font-1 = "Font Awesome 5 Free:style=Solid:size=12;1"
-  
+
   padding-left = 2
   padding-right = 2
   module-margin-left = 2
   height = 32
   wm-restack = i3
-  
+
   ; Modules
-  modules-right = battery date
+  modules-left = spotify
+  modules-right = wifi battery date
+
+; Spotify
+[module/spotify]
+  type = custom/script
+  exec = current_track
+  interval = 10
+
+; Wifi module
+[module/wifi]
+  type = custom/script
+  exec = current_wifi
+  label =  %output%
+  interval = 60
 
 ; Battery module
 [module/battery]
-  type = internal/battery 
+  type = internal/battery
   battery = BAT0
   adapter = AC
+  label-full =  %percentage%%
   label-discharging =  %percentage%%
   label-charging =  %percentage%%
 

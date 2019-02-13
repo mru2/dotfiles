@@ -16,10 +16,13 @@ export EDITOR=vim
 export PATH=$PATH:~/.bin:~/.local/bin
 
 # Add ruby binaries
-export PATH=$PATH:~/.gem/ruby/2.5.0/bin
+export PATH=$PATH:~/.gem/ruby/2.6.0/bin
 
 # Add yarn scripts
 export PATH=$PATH:~/.yarn/bin
+
+# Setup GOPATH
+export GOPATH=$HOME/workspace/go
 
 # Start X server
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then

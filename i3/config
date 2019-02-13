@@ -64,6 +64,9 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# toggle screen
+bindsym $mod+Tab move workspace to output right
+
 # focus the parent container
 # bindsym $mod+a focus parent
 

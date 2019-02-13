@@ -7,6 +7,7 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 Plug 'editorconfig/editorconfig-vim'
+Plug 'reasonml-editor/vim-reason-plus'
 call plug#end()
 
 set nocompatible
@@ -62,7 +63,7 @@ map <leader>h :bprev<CR>
 
 " Quick jump
 map <leader>b :Buffers<CR>
-map <leader>p :Files<CR>
+map <leader>p :GFiles<CR>
 
 " Close buffer
 map <leader>w :bd<CR>
